@@ -1628,5 +1628,47 @@ textarea:focus-visible {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+       
+/* AfyaWise mobile navigation fix */
+@media (max-width: 900px) {
+  .header-content {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .main-navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    z-index: 1100;
+  }
+
+  .main-navigation.is-open {
+    display: flex;
+  }
+
+  .main-navigation .nav-link {
+    display: block;
+    padding: 12px;
+  }
+}
+
     }
 }

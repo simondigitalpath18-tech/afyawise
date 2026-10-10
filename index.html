@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#087f8c">
+    <meta name="description" content="AfyaWise provides accessible health education, prevention tips, health lessons and quizzes for Kenyan communities and people worldwide.">
+
+    <title>AfyaWise | Health Education for Everyone</title>
+
+    <!-- Our CSS file will be connected in Step 2 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Our JavaScript file will be connected in Step 3 -->
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ACCESSIBILITY: Skip navigation -->
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="#home" class="brand" aria-label="AfyaWise home">
+                <span class="brand-icon" aria-hidden="true">💚</span>
+                <span class="brand-name">AfyaWise</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+                ☰
+            </button>
+
+            <nav class="main-navigation" id="main-navigation"
+                 aria-label="Main navigation">
+
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#topics" class="nav-link">Health Topics</a>
+                <a href="#lessons" class="nav-link">Lessons</a>
+                <a href="#assistant" class="nav-link">Health Assistant</a>
+                <a href="#quiz" class="nav-link">Quiz</a>
+                <a href="#about" class="nav-link">About Us</a>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main id="main-content">
+
+        <!-- ================= HERO / HOME ================= -->
+        <section class="hero-section" id="home">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="section-label">
+                        YOUR HEALTH. YOUR KNOWLEDGE.
+                    </span>
+
+                    <h1>
+                        Understand Health.
+                        <span>Live Better.</span>
+                    </h1>
+
+                    <p>
+                        Welcome to AfyaWise, your health education
+                        platform for learning about disease prevention,
+                        healthy living, nutrition, physical activity and
+                        community wellbeing.
+                    </p>
+
+                    <p>
+                        From Kenyan communities to the rest of the world,
+                        we make health information easier to understand
+                        and apply in everyday life.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#topics" class="button button-primary">
+                            Explore Health Topics
+                        </a>
+
+                        <a href="#quiz" class="button button-secondary">
+                            Test Your Knowledge
+                        </a>
+                    </div>
+
+                    <div class="hero-highlights">
+                        <span>📚 Learn</span>
+                        <span>🛡️ Prevent</span>
+                        <span>💚 Live Better</span>
+                    </div>
+
+                </div>
+
+                <div class="hero-visual" aria-label="Health and wellbeing">
+                    <div class="hero-circle">
+                        <span class="hero-emoji" aria-hidden="true">🩺</span>
+                        <span class="hero-small-icon icon-one"
+                              aria-hidden="true">💚</span>
+                        <span class="hero-small-icon icon-two"
+                              aria-hidden="true">🏃</span>
+                        <span class="hero-small-icon icon-three"
+                              aria-hidden="true">🥗</span>
+                    </div>
+
+                    <p class="hero-visual-caption">
+                        Knowledge is a foundation for healthier communities.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= PLATFORM FEATURES ================= -->
+        <section class="features-section" aria-label="Platform features">
+            <div class="container features-grid">
+
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">📖</span>
+                    <h2>Health Education</h2>
+                    <p>
+                        Learn about health conditions, prevention and
+                        everyday wellbeing.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🔎</span>
+                    <h2>Easy Discovery</h2>
+                    <p>
+                        Find health topics and explore lessons in one place.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🧠</span>
+                    <h2>Learn and Practise</h2>
+                    <p>
+                        Use educational quizzes to check your understanding.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🌍</span>
+                    <h2>Community Wellbeing</h2>
+                    <p>
+                        Discover practical ideas for healthier individuals
+                        and communities.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ================= HEALTH TOPICS ================= -->
+        <section class="topics-section section-padding" id="topics">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">EXPLORE AND LEARN</span>
+
+                    <h2>Explore Health Topics</h2>
+
+                    <p>
+                        Choose a topic to discover its lessons, prevention
+                        measures and practical health information.
+                    </p>
+                </div>
+
+                <!-- Topic search -->
+                <form class="search-form" id="topic-search-form" role="search">
+
+                    <label for="topic-search" class="visually-hidden">
+                        Search health topics
+                    </label>
+
+                    <input
+                        type="search"
+                        id="topic-search"
+                        name="topic-search"
+                        placeholder="Search topics, e.g. nutrition..."
+                        autocomplete="off">
+
+                    <button type="submit" class="button button-primary">
+                        Search
+                    </button>
+
+                    <button
+                        type="button"
+                        id="clear-search"
+                        class="button button-light">
+                        Clear
+                    </button>
+
+                </form>
+
+                <!-- Topic category filters -->
+                <div class="topic-filters" id="topic-filters"
+                     aria-label="Filter health topics">
+
+                    <button type="button"
+                            class="filter-button active"
+                            data-category="all"
+                            aria-pressed="true">
+                        All Topics
+                    </button>
+
+                    <button type="button"
+                            class="filter-button"
+                            data-category="prevention"
+                            aria-pressed="false">
+                        Disease Prevention
+                    </button>
+
+                    <button type="button"
+                            class="filter-button"
+                            data-category="nutrition"
+                            aria-pressed="false">
+                        Nutrition
+                    </button>
+
+                    <button type="button"
+                            class="filter-button"
+                            data-category="fitness"
+                            aria-pressed="false">
+                        Fitness
+                    </button>
+
+                    <button type="button"
+                            class="filter-button"
+                            data-category="wellbeing"
+                            aria-pressed="false">
+                        Mental Wellbeing
+                    </button>
+
+                    <button type="button"
+                            class="filter-button"
+                            data-category="community"
+                            aria-pressed="false">
+                        Community Health
+                    </button>
+
+                </div>
+
+                <!-- JavaScript will populate the health topics here -->
+                <div class="topics-grid" id="topics-grid"
+                     aria-live="polite">
+
+                    <p class="loading-message">
+                        Health topics will appear here when the website
+                        functionality is connected.
+                    </p>
+
+                </div>
+
+                <p class="empty-state" id="topics-empty" hidden>
+                    No topics match your search. Try another keyword
+                    or choose a different category.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- ================= FEATURED LESSONS ================= -->
+        <section class="lessons-section section-padding" id="lessons">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">KNOWLEDGE FOR DAILY LIFE</span>
+
+                    <h2>Featured Health Lessons</h2>
+
+                    <p>
+                        Build your health knowledge through clear,
+                        practical and easy-to-follow educational lessons.
+                    </p>
+                </div>
+
+                <!-- JavaScript will create the lesson cards here -->
+                <div class="lessons-grid" id="lessons-grid"
+                     aria-live="polite">
+
+                    <p class="loading-message">
+                        Featured lessons will appear here when
+                        the website functionality is connected.
+                    </p>
+
+                </div>
+
+                <!-- Full lesson reader -->
+                <article class="lesson-reader" id="lesson-reader"
+                         aria-labelledby="lesson-title" hidden>
+
+                    <div class="lesson-reader-header">
+                        <span class="section-label">HEALTH LESSON</span>
+
+                        <button type="button"
+                                class="button button-light"
+                                id="close-lesson">
+                            Close Lesson
+                        </button>
+                    </div>
+
+                    <h3 id="lesson-title">Lesson Title</h3>
+
+                    <p id="lesson-introduction"></p>
+
+                    <div class="lesson-meta" id="lesson-meta"></div>
+
+                    <div class="lesson-content" id="lesson-content"></div>
+
+                    <div class="lesson-sources">
+                        <h4>Further Reading</h4>
+                        <p id="lesson-sources">
+                            Consult trusted health authorities for
+                            additional information.
+                        </p>
+                    </div>
+
+                    <p class="lesson-disclaimer">
+                        This lesson provides general health education.
+                        It does not replace individual assessment,
+                        diagnosis or treatment by a qualified health
+                        professional.
+                    </p>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ================= HEALTH ASSISTANT ================= -->
+        <section class="assistant-section section-padding" id="assistant">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">LEARN WITH AFYA WISE</span>
+
+                    <h2>Health Education Assistant</h2>
+
+                    <p>
+                        Ask a general health education question or choose
+                        one of the suggested questions below.
+                    </p>
+                </div>
+
+                <div class="assistant-panel">
+
+                    <div class="assistant-welcome">
+                        <span class="assistant-avatar"
+                              aria-hidden="true">💚</span>
+
+                        <div>
+                            <h3>Welcome to AfyaWise Assistant</h3>
+
+                            <p>
+                                I can help you explore general health
+                                information, prevention and healthy habits.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Suggested questions -->
+                    <div class="suggested-questions">
+                        <p>Try asking about:</p>
+
+                        <button type="button"
+                                class="suggestion-button"
+                                data-question="How can I prevent malaria?">
+                            🦟 Malaria prevention
+                        </button>
+
+                        <button type="button"
+                                class="suggestion-button"
+                                data-question="What is a balanced diet?">
+                            🥗 Balanced diet
+                        </button>
+
+                        <button type="button"
+                                class="suggestion-button"
+                                data-question="Why is physical activity important?">
+                            🏃 Physical activity
+                        </button>
+
+                        <button type="button"
+                                class="suggestion-button"
+                                data-question="How can I manage everyday stress?">
+                            🌱 Stress management
+                        </button>
+                    </div>
+
+                    <!-- Assistant conversation -->
+                    <div class="chat-messages"
+                         id="chat-messages"
+                         role="log"
+                         aria-live="polite"
+                         aria-relevant="additions">
+
+                        <div class="chat-message assistant-message">
+                            <p>
+                                Hello! What health topic would you like
+                                to understand today?
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Question form -->
+                    <form class="chat-form" id="chat-form">
+
+                        <label for="chat-input" class="visually-hidden">
+                            Type your health education question
+                        </label>
+
+                        <textarea
+                            id="chat-input"
+                            name="question"
+                            rows="2"
+                            maxlength="500"
+                            placeholder="Type your health question here..."
+                            required></textarea>
+
+                        <button type="submit"
+                                class="button button-primary"
+                                id="chat-submit">
+                            Ask Question
+                        </button>
+
+                    </form>
+
+                    <p class="assistant-note">
+                        Educational tool only. Responses are not a medical
+                        diagnosis, and this assistant is not a substitute
+                        for a qualified health professional.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= HEALTH QUIZ ================= -->
+        <section class="quiz-section section-padding" id="quiz">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">LEARN BY DOING</span>
+
+                    <h2>Test Your Health Knowledge</h2>
+
+                    <p>
+                        Answer the questions, check your results and
+                        strengthen your understanding of healthy living.
+                    </p>
+                </div>
+
+                <div class="quiz-panel" id="quiz-panel">
+
+                    <!-- Quiz introduction -->
+                    <div class="quiz-intro" id="quiz-intro">
+
+                        <span class="quiz-icon"
+                              aria-hidden="true">🧠</span>
+
+                        <h3>Ready for the Health Quiz?</h3>
+
+                        <p>
+                            Test your knowledge of disease prevention,
+                            nutrition, physical activity and wellbeing.
+                        </p>
+
+                        <p>
+                            Choose one answer for each question.
+                            Your score will appear when you finish.
+                        </p>
+
+                        <button type="button"
+                                class="button button-primary"
+                                id="start-quiz">
+                            Start Quiz
+                        </button>
+
+                    </div>
+
+                    <!-- Active quiz -->
+                    <div class="quiz-content" id="quiz-content" hidden>
+
+                        <div class="quiz-progress-header">
+                            <p id="quiz-question-count">
+                                Question 1
+                            </p>
+
+                            <p id="quiz-score-live">
+                                Score: 0
+                            </p>
+                        </div>
+
+                        <div class="progress-track"
+                             role="progressbar"
+                             id="quiz-progress"
+                             aria-label="Quiz progress"
+                             aria-valuemin="0"
+                             aria-valuemax="100"
+                             aria-valuenow="0">
+
+                            <div class="progress-fill"
+                                 id="quiz-progress-fill"></div>
+
+                        </div>
+
+                        <h3 id="quiz-question">
+                            The question will appear here.
+                        </h3>
+
+                        <form id="quiz-answer-form">
+
+                            <fieldset class="quiz-options">
+                                <legend class="visually-hidden">
+                                    Choose your answer
+                                </legend>
+
+                                <div id="quiz-options"></div>
+                            </fieldset>
+
+                            <p class="quiz-feedback"
+                               id="quiz-feedback"
+                               aria-live="polite"></p>
+
+                            <button type="submit"
+                                    class="button button-primary"
+                                    id="submit-answer">
+                                Submit Answer
+                            </button>
+
+                            <button type="button"
+                                    class="button button-secondary"
+                                    id="next-question"
+                                    hidden>
+                                Next Question
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                    <!-- Quiz results -->
+                    <div class="quiz-results" id="quiz-results"
+                         aria-live="polite" hidden>
+
+                        <span class="results-icon"
+                              aria-hidden="true">🎉</span>
+
+                        <h3>Quiz Completed!</h3>
+
+                        <p id="quiz-final-score"></p>
+
+                        <p id="quiz-result-message"></p>
+
+                        <button type="button"
+                                class="button button-primary"
+                                id="restart-quiz">
+                            Try Again
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= HEALTHY LIVING ================= -->
+        <section class="habits-section section-padding" id="healthy-living">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">SMALL STEPS, BETTER HEALTH</span>
+
+                    <h2>Everyday Healthy Living</h2>
+
+                    <p>
+                        Simple habits can support physical health,
+                        mental wellbeing and community health.
+                    </p>
+                </div>
+
+                <div class="habits-grid">
+
+                    <article class="habit-card">
+                        <span class="habit-icon"
+                              aria-hidden="true">🥗</span>
+
+                        <h3>Eat Well</h3>
+
+                        <p>
+                            Aim for a varied, balanced diet that includes
+                            vegetables, fruits, whole grains and suitable
+                            sources of protein.
+                        </p>
+                    </article>
+
+                    <article class="habit-card">
+                        <span class="habit-icon"
+                              aria-hidden="true">💧</span>
+
+                        <h3>Stay Hydrated</h3>
+
+                        <p>
+                            Drink safe water regularly and adjust your
+                            intake to your activity level, weather
+                            and individual needs.
+                        </p>
+                    </article>
+
+                    <article class="habit-card">
+                        <span class="habit-icon"
+                              aria-hidden="true">🏃</span>
+
+                        <h3>Keep Moving</h3>
+
+                        <p>
+                            Include suitable physical activity in your
+                            routine and reduce long periods of sitting.
+                        </p>
+                    </article>
+
+                    <article class="habit-card">
+                        <span class="habit-icon"
+                              aria-hidden="true">😴</span>
+
+                        <h3>Rest Well</h3>
+
+                        <p>
+                            Maintain a regular sleep routine and allow
+                            your body time to recover.
+                        </p>
+                    </article>
+
+                    <article class="habit-card">
+                        <span class="habit-icon"
+                              aria-hidden="true">🧼</span>
+
+                        <h3>Practise Hygiene</h3>
+
+                        <p>
+                            Wash your hands appropriately, handle food
+                            safely and maintain a clean environment.
+                        </p>
+                    </article>
+
+                    <article class="habit-card">
+                        <span class="habit-icon"
+                              aria-hidden="true">🤝</span>
+
+                        <h3>Support Wellbeing</h3>
+
+                        <p>
+                            Build supportive relationships, manage stress
+                            and seek help when you need it.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= COMMUNITY HEALTH ================= -->
+        <section class="community-section section-padding"
+                 id="community-health">
+
+            <div class="container community-content">
+
+                <div class="community-text">
+                    <span class="section-label">HEALTH STARTS WITH US</span>
+
+                    <h2>Building Healthier Communities Together</h2>
+
+                    <p>
+                        Health promotion goes beyond treating illness.
+                        It also involves helping people gain knowledge,
+                        develop healthy habits and create environments
+                        that support wellbeing.
+                    </p>
+
+                    <p>
+                        In Kenya and around the world, individuals,
+                        families, schools, health facilities and
+                        communities can all contribute to better health.
+                    </p>
+
+                    <a href="#lessons" class="button button-primary">
+                        Explore Health Education
+                    </a>
+                </div>
+
+                <div class="community-visual"
+                     aria-label="People working together for community health">
+
+                    <span aria-hidden="true">🌍</span>
+                    <span aria-hidden="true">💚</span>
+                    <span aria-hidden="true">🤝</span>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= ABOUT AFYAWISE ================= -->
+        <section class="about-section section-padding" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">OUR PURPOSE</span>
+
+                    <h2>About AfyaWise</h2>
+
+                    <p>
+                        Making health knowledge accessible, understandable
+                        and useful in everyday life.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+
+                    <article class="about-card">
+                        <span class="about-icon"
+                              aria-hidden="true">🎯</span>
+
+                        <h3>Our Mission</h3>
+
+                        <p>
+                            To make general health education easier to
+                            access and understand, supporting informed
+                            decisions and healthier communities.
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <span class="about-icon"
+                              aria-hidden="true">🔭</span>
+
+                        <h3>Our Vision</h3>
+
+                        <p>
+                            A world where people can access understandable
+                            health information and take meaningful steps
+                            towards better wellbeing.
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <span class="about-icon"
+                              aria-hidden="true">💡</span>
+
+                        <h3>Our Approach</h3>
+
+                        <p>
+                            We combine health education, disease prevention,
+                            healthy living guidance and digital learning
+                            to support individuals and communities.
+                        </p>
+                    </article>
+
+                </div>
+
+                <!-- Developer profile -->
+                <div class="developer-profile">
+
+                    <div class="developer-avatar"
+                         aria-hidden="true">👨‍💻</div>
+
+                    <div class="developer-details">
+
+                        <span class="section-label">
+                            MEET THE DEVELOPER
+                        </span>
+
+                        <h3>Simon Mwangi</h3>
+
+                        <p class="developer-role">
+                            Health Promotion and Sports Science
+                        </p>
+
+                        <p>
+                            Simon is a Health Promotion and Sports Science
+                            student with a passion for health education,
+                            community wellbeing and digital skills.
+                            AfyaWise reflects his interest in using
+                            technology to make health information more
+                            accessible and support health promotion.
+                        </p>
+
+                        <p class="developer-credit">
+                            Designed and developed by Simon Mwangi.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= HEALTH DISCLAIMER ================= -->
+        <section class="disclaimer-section" id="health-disclaimer">
+            <div class="container disclaimer-content">
+
+                <span class="disclaimer-icon"
+                      aria-hidden="true">⚠️</span>
+
+                <div>
+                    <h2>Important Health Information</h2>
+
+                    <p>
+                        AfyaWise is an educational platform and does not
+                        replace professional medical advice, diagnosis
+                        or treatment. Health information may not apply
+                        to every individual or situation.
+                    </p>
+
+                    <p>
+                        For personal medical concerns, consult a qualified
+                        healthcare professional. If you or someone else
+                        may be experiencing a medical emergency, seek
+                        emergency medical assistance immediately.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="#home" class="brand">
+                        <span class="brand-icon"
+                              aria-hidden="true">💚</span>
+
+                        <span class="brand-name">AfyaWise</span>
+                    </a>
+
+                    <p>
+                        Health education for healthier individuals
+                        and communities.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h2>Explore</h2>
+                    <a href="#topics">Health Topics</a>
+                    <a href="#lessons">Lessons</a>
+                    <a href="#assistant">Health Assistant</a>
+                    <a href="#quiz">Health Quiz</a>
+                </div>
+
+                <div class="footer-links">
+                    <h2>Learn More</h2>
+                    <a href="#healthy-living">Healthy Living</a>
+                    <a href="#community-health">Community Health</a>
+                    <a href="#about">About AfyaWise</a>
+                    <a href="#health-disclaimer">Health Disclaimer</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; <span id="current-year">2026</span>
+                    AfyaWise. All rights reserved.
+                </p>
+
+                <p>
+                    Designed and developed by
+                    <strong>Simon Mwangi</strong>.
+                </p>
+
+                <a href="#home" class="back-to-top">
+                    Back to top ↑
+                </a>
+
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

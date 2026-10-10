@@ -32,17 +32,17 @@
                 <span class="brand-icon" aria-hidden="true">💚</span>
                 <span class="brand-name">AfyaWise</span>
             </a>
-
-            <button
-                
-                id="menu-toggle" 
+        
+<button
+  class="menu-toggle"
+  id="menu-toggle"
   type="button"
   aria-label="Open navigation menu"
   aria-expanded="false"
   aria-controls="main-navigation"
-  onclick="const nav=document.getElementById('main-navigation');const open=nav.classList.toggle('is-open');this.setAttribute('aria-expanded',String(open));this.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');">
+  onclick="(function(b){var n=document.getElementById('main-navigation');if(!n)return;var o=n.classList.toggle('is-open');b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Close navigation menu':'Open navigation menu');b.textContent=o?'✕':'☰';})(this)">
   ☰
-            </button>
+</button>
 
             <nav class="main-navigation" id="main-navigation"
                  aria-label="Main navigation">
@@ -117,6 +117,8 @@
     Knowledge is a foundation for healthier communities.
   </p>
 </div
+
+    
     
                     <div class="hero-circle">
                         <span class="hero-emoji" aria-hidden="true">🩺</span>

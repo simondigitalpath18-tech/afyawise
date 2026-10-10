@@ -36,14 +36,15 @@
             <button
                 class="menu-toggle"
                 id="menu-toggle"
-                
-onclick="const nav = document.getElementById('main-navigation'); const open = nav.classList.toggle('is-open'); this.setAttribute('aria-expanded', String(open));"
-
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="main-navigation">
-                ☰
+                <button
+  class="menu-toggle"
+  id="menu-toggle"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+  aria-controls="main-navigation"
+  onclick="const nav=document.getElementById('main-navigation');const open=nav.classList.toggle('is-open');this.setAttribute('aria-expanded',String(open));this.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');">
+  ☰
             </button>
 
             <nav class="main-navigation" id="main-navigation"

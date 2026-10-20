@@ -1672,3 +1672,38 @@ textarea:focus-visible {
 
     }
 }
+
+/* AfyaWise developer contact details */
+.developer-contact {
+    margin-top: 20px;
+    padding: 18px;
+    background: rgba(8, 127, 140, 0.07);
+    border-left: 4px solid #087f8c;
+    border-radius: 10px;
+}
+
+.developer-contact h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #087f8c;
+}
+
+.developer-contact p {
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.developer-contact a {
+    color: #087f8c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.developer-contact a:hover {
+    text-decoration: underline;
+}
+
+.developer-contact a:focus-visible {
+    outline: 2px solid #087f8c;
+    outline-offset: 3px;
+}
